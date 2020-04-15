@@ -1,11 +1,10 @@
-/*#include<bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 const int maxn=2e5;
 const int mod=998244353;
 typedef long long ll;
 typedef double db;
 int pw[maxn+5];
-int dp[maxn+5][10];
 int n;
 int ans[maxn+5];
 int main()
@@ -27,4 +26,4 @@ int main()
     ans[n]=10;
     for (int i=1;i<=n;i++) printf("%d ",ans[i]);
     return 0;
-}*/
+}
