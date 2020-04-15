@@ -1,4 +1,4 @@
-/*#include<bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 const int maxn=1e5;
 vector<int> v[26];
@@ -37,6 +37,6 @@ int main()
         if (bo) printf("%d\n",ans);
     }
     return 0;
-}*/
+}
 
 
