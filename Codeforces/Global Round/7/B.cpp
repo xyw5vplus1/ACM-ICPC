@@ -1,4 +1,4 @@
-/*#include<bits/stdc++.h>
+#include<bits/stdc++.h>
 #define lson(p) p<<1
 #define rson(p) p<<1|1
 using namespace std;
@@ -24,4 +24,4 @@ int main()
     }
     for (int i=1;i<=n;i++) printf("%lld ",b[i]);
     return 0;
-}*/
+}
