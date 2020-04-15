@@ -1,4 +1,4 @@
-/*#include<bits/stdc++.h>
+#include<bits/stdc++.h>
 #define lson(p) p<<1
 #define rson(p) p<<1|1
 using namespace std;
@@ -26,4 +26,4 @@ int main()
         ans2=1LL*ans2*(v[i]-v[i-1])%mod;
     printf("%lld %lld\n",ans1,ans2);
     return 0;
-}*/
+}
