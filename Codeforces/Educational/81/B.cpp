@@ -1,4 +1,4 @@
-/*#include<bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 const int maxn=1e5;
 int T,n,x;
@@ -38,6 +38,6 @@ int main()
         printf("%d\n",ans);
     }
     return 0;
-}*/
+}
 
 
