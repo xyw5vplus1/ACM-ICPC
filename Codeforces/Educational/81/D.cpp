@@ -1,4 +1,4 @@
-/*#include<bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 const int maxn=1e5;
 typedef long long ll;
@@ -46,6 +46,6 @@ int main()
         printf("%I64d\n",getPhi(m));
     }
     return 0;
-}*/
+}
 
 
