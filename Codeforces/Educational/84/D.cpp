@@ -1,4 +1,4 @@
-/*#include<bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 const int maxn=4e5;
@@ -55,5 +55,5 @@ int main()
         printf("%d\n",ans);
     }
     return 0;
-}*/
+}
 
