@@ -1,4 +1,4 @@
-/*#include<bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 const int mod=998244353;
 const int maxn=5e5;
@@ -64,4 +64,4 @@ int main()
     for (int bt=0;bt<k;bt++) ans=1LL*ans*calc(bt)%mod;
     printf("%d\n",ans);
     return 0;
-}*/
+}
