@@ -4,6 +4,7 @@
 有各大OJ的题目提交。
 比如HDU、POJ这种，
 Codeforces上每场比赛或者重现的提交……
+Code Jam比赛的提交记录（有部分题只过了部分分，还没补……）
 
 然后一些特定知识点算法的题单：
 Suffix Array Problem：记录了一些做过的后缀数组的题目
