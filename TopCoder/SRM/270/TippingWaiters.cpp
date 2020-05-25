@@ -13,7 +13,7 @@ class TippingWaiters
 			else r=mid-1;
 		}
 		int ans1=l+bill;
-		l=0,r=cash-bill;
+		l=1,r=cash-bill;
 		while (l<r) {
 			ll mid=(l+r)>>1LL;
 			if (mid*19>=bill) r=mid;
