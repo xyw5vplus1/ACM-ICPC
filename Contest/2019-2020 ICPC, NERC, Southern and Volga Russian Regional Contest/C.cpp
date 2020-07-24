@@ -85,16 +85,16 @@ int main()
 		pl[i]=l; pr[i]=r; pd[i]=d;
 		v[r].push_back(make_pair(l,d));
 	}
-	build(1,1,maxn);
+	build(1,1,maxn-1);
 	ll mxpro=0;
 	int ansL,ansR;
 	for (int i=1;i<maxn;i++) {
 		for (int j=0;j<(int)v[i].size();j++) {
 			int pos=v[i][j].first;ll val=v[i][j].second;
-			modify(1,1,maxn,pos,val);
+			modify(1,1,maxn-1,pos,val);
 		}
-		modify(1,1,maxn,i,-m);
-		node e=getMx(1,1,maxn,1,i);
+		modify(1,1,maxn-1,i,-m);
+		node e=getMx(1,1,maxn-1,1,i);
 		if (e.rmx>mxpro) {
 			mxpro=e.rmx; ansL=e.rmxpos; ansR=i;
 		}
