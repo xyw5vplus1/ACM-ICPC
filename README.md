@@ -10,4 +10,5 @@ Code Jam比赛的提交记录（有部分题只过了部分分，还没补……
 然后一些特定知识点算法的题单：  
 Suffix Array Problem：记录了一些做过的后缀数组的题目  
 
-ICPC_Oniste：记录了一些参加2019 ACM-ICPC 现场赛的补题情况  
+ICPC_Oniste：记录了一些参加ACM-ICPC 现场赛的补题情况  
+CCPC_Oniste：记录了一些参加CCPC 现场赛的过题情况  
