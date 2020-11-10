@@ -1,7 +1,8 @@
-# ACM-ICPC  
-记录了xyw5vplus1在参加ACM-ICPC的一些文件  
+# Algorithm-Contest  
+记录了xyw5vplus1在参加算法竞赛的一些文件  
 
-有各大OJ 2020年之后的题目提交。  
+主要有一些训练过的比赛，参加ACM-ICPC/CCPC等的记录，
+以及各大OJ 2020年之后的题目提交。  
 比如HDU、POJ、BZOJ这种，  
 Codeforces上每场比赛或者重现的提交……  
 Code Jam比赛的提交记录（有部分题只过了部分分，还没补……）
