@@ -19,7 +19,7 @@ int main()
     ll ans=0;
     for (int i=1;i<=n;i++) {
         sum[i]=sum[i-1]+a[i];
-        ans+=a[i]*i-sum[i];
+        ans+=1LL*a[i]*i-sum[i];
     }
     printf("%lld\n",ans);
     return 0;
