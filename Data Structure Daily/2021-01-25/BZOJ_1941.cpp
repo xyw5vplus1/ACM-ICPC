@@ -57,7 +57,7 @@ int build(int l,int r,int d)
     int mid=(l+r)>>1;
     int p=mid;
     cmpd=d;
-    nth_element(tr+l,tr+mid+1,tr+r+1,cmp);
+    nth_element(tr+l,tr+mid,tr+r+1,cmp);
     tr[p].mx[0]=tr[p].mn[0]=tr[p].d[0];
     tr[p].mx[1]=tr[p].mn[1]=tr[p].d[1];
     if (l<mid) tr[p].l=build(l,mid-1,d^1);
