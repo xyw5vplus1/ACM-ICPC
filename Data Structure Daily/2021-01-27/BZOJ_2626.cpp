@@ -65,7 +65,7 @@ int build(int l,int r,int d) //建K-D tree的过程，l,r为数组下标，d为�
     int mid=(l+r)>>1;
     int p=mid;
     cmpd=d;
-    nth_element(tr+l,tr+mid+1,tr+r+1,cmp); //能够按照第d维的大小对区间进行划分
+    nth_element(tr+l,tr+mid,tr+r+1,cmp); //能够按照第d维的大小对区间进行划分
     tr[p].mx[0]=tr[p].mn[0]=tr[p].d[0];
     tr[p].mx[1]=tr[p].mn[1]=tr[p].d[1];
     tr[p].mnd=tr[p].id;
