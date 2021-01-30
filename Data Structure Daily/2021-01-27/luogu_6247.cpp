@@ -58,12 +58,12 @@ void pushup(int p)
         updateMin(tr[p].mn[1],tr[r].mn[1]);
     }
 }
-int build(int l,int r,int d) //½¨K-D treeµÄ¹ı³Ì£¬l,rÎªÊı×éÏÂ±ê£¬dÎªµ±Ç°»®·ÖµÄÎ¬¶È
+int build(int l,int r,int d) //å»ºK-D treeçš„è¿‡ç¨‹ï¼Œl,rä¸ºæ•°ç»„ä¸‹æ ‡ï¼Œdä¸ºå½“å‰åˆ’åˆ†çš„ç»´åº¦
 {
     int mid=(l+r)>>1;
     int p=mid;
     cmpd=d;
-    nth_element(tr+l,tr+mid+1,tr+r+1,cmp); //ÄÜ¹»°´ÕÕµÚdÎ¬µÄ´óĞ¡¶ÔÇø¼ä½øĞĞ»®·Ö
+    nth_element(tr+l,tr+mid,tr+r+1,cmp); //èƒ½å¤ŸæŒ‰ç…§ç¬¬dç»´çš„å¤§å°å¯¹åŒºé—´è¿›è¡Œåˆ’åˆ†
     tr[p].mx[0]=tr[p].mn[0]=tr[p].d[0];
     tr[p].mx[1]=tr[p].mn[1]=tr[p].d[1];
     if (l<mid) tr[p].l=build(l,mid-1,d^1);
@@ -71,8 +71,8 @@ int build(int l,int r,int d) //½¨K-D treeµÄ¹ı³Ì£¬l,rÎªÊı×éÏÂ±ê£¬dÎªµ±Ç°»®·ÖµÄÎ¬¶
     pushup(p);
     return p;
 }
-db getDistMin(int p,db qx,db qy)//Í³¼ÆÄ³¸öµã(qx,qy)µ½ÒÔpÎª¸ùµÄ¾ØĞÎÇøÓòµÄ×î½ü¾àÀë
-    //ÆäÖĞ£¬Èç¹û²éÑ¯µãÔÚ¾ØĞÎÇøÓòÄÚ²¿£¬ÔòĞèÒª¼ÌĞøµİ¹é£¬µ±Ç°·µ»ØÖµÎª0¡£
+db getDistMin(int p,db qx,db qy)//ç»Ÿè®¡æŸä¸ªç‚¹(qx,qy)åˆ°ä»¥pä¸ºæ ¹çš„çŸ©å½¢åŒºåŸŸçš„æœ€è¿‘è·ç¦»
+    //å…¶ä¸­ï¼Œå¦‚æœæŸ¥è¯¢ç‚¹åœ¨çŸ©å½¢åŒºåŸŸå†…éƒ¨ï¼Œåˆ™éœ€è¦ç»§ç»­é€’å½’ï¼Œå½“å‰è¿”å›å€¼ä¸º0ã€‚
 {
     db dist=0;
     if (qx>=tr[p].mn[0]&&qx<=tr[p].mx[0]&&qy>=tr[p].mn[1]&&qy<=tr[p].mx[1]) return 0.0;
@@ -84,8 +84,8 @@ db getDistMin(int p,db qx,db qy)//Í³¼ÆÄ³¸öµã(qx,qy)µ½ÒÔpÎª¸ùµÄ¾ØĞÎÇøÓòµÄ×î½ü¾àÀë
     dist=sqrt(l*l+r*r);
     return dist;
 }
-db getDistMax(int p,db qx,db qy)//Í³¼ÆÄ³¸öµã(qx,qy)µ½ÒÔpÎª¸ùµÄ¾ØĞÎÇøÓòµÄ×î½ü¾àÀë
-    //ÆäÖĞ£¬Èç¹û²éÑ¯µãÔÚ¾ØĞÎÇøÓòÄÚ²¿£¬ÔòĞèÒª¼ÌĞøµİ¹é£¬µ±Ç°·µ»ØÖµÎª0¡£
+db getDistMax(int p,db qx,db qy)//ç»Ÿè®¡æŸä¸ªç‚¹(qx,qy)åˆ°ä»¥pä¸ºæ ¹çš„çŸ©å½¢åŒºåŸŸçš„æœ€è¿‘è·ç¦»
+    //å…¶ä¸­ï¼Œå¦‚æœæŸ¥è¯¢ç‚¹åœ¨çŸ©å½¢åŒºåŸŸå†…éƒ¨ï¼Œåˆ™éœ€è¦ç»§ç»­é€’å½’ï¼Œå½“å‰è¿”å›å€¼ä¸º0ã€‚
 {
     db l,r;
     l=max(abs(qx-tr[p].mn[0]),abs(qx-tr[p].mx[0]));
@@ -101,7 +101,7 @@ void queryMin(int p)
     db dl=1.0*INF,dr=1.0*INF;
     if (tr[p].l) dl=getDistMin(tr[p].l,qx,qy);
     if (tr[p].r) dr=getDistMin(tr[p].r,qx,qy);
-    //ÏÂÃæµÄ´úÂëÓÃÁËÆô·¢Ê½ËÑË÷µÄË¼Ïë£¬ÏÈÕÒ¸üÈİÒ×Ê¹mn±äĞ¡µÄÄÇÒ»²à×ÓÊ÷
+    //ä¸‹é¢çš„ä»£ç ç”¨äº†å¯å‘å¼æœç´¢çš„æ€æƒ³ï¼Œå…ˆæ‰¾æ›´å®¹æ˜“ä½¿mnå˜å°çš„é‚£ä¸€ä¾§å­æ ‘
     if (dl<dr) {
         if (dl<mn) queryMin(tr[p].l);
         if (dr<mn) queryMin(tr[p].r);
@@ -119,7 +119,7 @@ void queryMax(int p)
     db dl=1.0*INF,dr=1.0*INF;
     if (tr[p].l) dl=getDistMax(tr[p].l,qx,qy);
     if (tr[p].r) dr=getDistMax(tr[p].r,qx,qy);
-    //ÏÂÃæµÄ´úÂëÓÃÁËÆô·¢Ê½ËÑË÷µÄË¼Ïë£¬ÏÈÕÒ¸üÈİÒ×Ê¹mn±äĞ¡µÄÄÇÒ»²à×ÓÊ÷
+    //ä¸‹é¢çš„ä»£ç ç”¨äº†å¯å‘å¼æœç´¢çš„æ€æƒ³ï¼Œå…ˆæ‰¾æ›´å®¹æ˜“ä½¿mnå˜å°çš„é‚£ä¸€ä¾§å­æ ‘
     if (dl>dr) {
         if (dl>mx) queryMax(tr[p].l);
         if (dr>mx) queryMax(tr[p].r);
